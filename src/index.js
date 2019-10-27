@@ -22,10 +22,9 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 
 // core components
 import Admin from "layouts/Admin.js";
-import LogIn from './views/LogIn/LogIn.js'
+import LogIn from "./views/LogIn/LogIn.js";
 import "assets/css/material-dashboard-react.css?v=1.8.0";
-import 'index.scss';
-
+import "index.scss";
 
 const hist = createBrowserHistory();
 
