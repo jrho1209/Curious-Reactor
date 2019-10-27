@@ -64,7 +64,7 @@ class LogInForm extends PureComponent {
         </Link>
         <Link to="/admin/dashboard">
         <div className="login__button">
-        <Button variant="outlined"> Create Account </Button>
+        <Button variant="outlined"> Register to Survay </Button>
         </div>
         </Link>
       </form>
