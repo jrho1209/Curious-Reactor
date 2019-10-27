@@ -31,6 +31,7 @@ const appStyle = theme => ({
   map: {
     marginTop: "70px"
   }
+  
 });
 
 export default appStyle;

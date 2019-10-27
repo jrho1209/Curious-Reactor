@@ -11,9 +11,11 @@ import {
   dangerColor,
   whiteColor,
   grayColor,
+  curiousColor,
   blackColor,
   hexToRgb
 } from "assets/jss/material-dashboard-react.js";
+import { blockStatement } from "@babel/types";
 
 const sidebarStyle = theme => ({
   drawerPaper: {
@@ -61,9 +63,10 @@ const sidebarStyle = theme => ({
     }
   },
   logo: {
+    
     position: "relative",
-    padding: "15px 15px",
-    zIndex: "4",
+    padding: "25px 25px",
+    zIndex: "2",
     "&:after": {
       content: '""',
       position: "absolute",
@@ -78,17 +81,23 @@ const sidebarStyle = theme => ({
   logoLink: {
     ...defaultFont,
     textTransform: "uppercase",
+    marginTop: "22px",
     padding: "5px 0",
     display: "block",
-    fontSize: "18px",
+    fontSize: "16px",
     textAlign: "left",
     fontWeight: "400",
-    lineHeight: "30px",
+    lineHeight: "0px",
     textDecoration: "none",
     backgroundColor: "transparent",
     "&,&:hover": {
-      color: whiteColor
+      color: whiteColor,
     }
+  },
+  logoCuriousText:{
+    color: curiousColor,
+    display:"inline-block",
+    paddingLeft: "5px",
   },
   logoLinkRTL: {
     textAlign: "right"
@@ -97,7 +106,7 @@ const sidebarStyle = theme => ({
     width: "30px",
     display: "inline-block",
     maxHeight: "30px",
-    marginLeft: "10px",
+    marginLeft: "0px",
     marginRight: "15px"
   },
   img: {
