@@ -1,0 +1,19 @@
+// @import 'settings/variable';  //themes' colors
+
+//base...
+// @import 'generic/normalize.scss';
+// @import 'generic/box-sizing.scss';
+@import './scss/base/scaffolding';        // styles of base elements
+@import './scss/base/typography';          // base styles of h1-h6, p, span
+@import './scss/base/variable';
+//components...
+@import './scss/components/check-box';
+@import './scss/components/form';
+@import './scss/components/btn';
+@import './scss//components/login';
+//pages...
+@import './scss/containers/account';
+
+//objects...
+// @import 'objects/layout.scss';
+
