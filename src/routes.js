@@ -32,6 +32,10 @@ import Icons from "views/Icons/Icons.js";
 import Maps from "views/Maps/Maps.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
 import Survey from "views/Survey/Survey.js";
+import MatchedHistory from "views/MatchedHistory/MatchedHistory";
+import SurveyHistory from "views/SurveyHistory/SurveyHistory";
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
+import HistoryIcon from '@material-ui/icons/History';
 
 
 
@@ -50,27 +54,27 @@ const dashboardRoutes = [
     component: UserProfile,
     layout: "/admin"
   },
-  {
-    path: "/table",
-    name: "Table List",
-    icon: "content_paste",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: LibraryBooks,
-    component: Typography,
-    layout: "/admin"
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: BubbleChart,
-    component: Icons,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/table",
+  //   name: "Table List",
+  //   icon: "content_paste",
+  //   component: TableList,
+  //   layout: "/admin"
+  // },
+  // {
+  //   path: "/typography",
+  //   name: "Typography",
+  //   icon: LibraryBooks,
+  //   component: Typography,
+  //   layout: "/admin"
+  // },
+  // {
+  //   path: "/icons",
+  //   name: "Icons",
+  //   icon: BubbleChart,
+  //   component: Icons,
+  //   layout: "/admin"
+  // },
   // {
   //   path: "/maps",
   //   name: "Maps",
@@ -78,21 +82,36 @@ const dashboardRoutes = [
   //   component: Maps,
   //   layout: "/admin"
   // },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    icon: Notifications,
-    component: NotificationsPage,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/notifications",
+  //   name: "Notifications",
+  //   icon: Notifications,
+  //   component: NotificationsPage,
+  //   layout: "/admin"
+  // },
   {
     path: "/survey",
     name: "Survey",
     icon: AssignmentIcon,
     component: Survey,
     layout: "/admin"
-  }
-  
+  },
+  {
+    path: "/survey-history",
+    name: "Survey History",
+    icon: HistoryIcon,
+    component: SurveyHistory,
+    layout: "/admin"
+  },
+  {
+    path: "/matched-history",
+    name: "Matched History",
+    icon: EmojiPeopleIcon,
+    component: MatchedHistory,
+    layout: "/admin"
+  },
+
+
 ];
 
 export default dashboardRoutes;

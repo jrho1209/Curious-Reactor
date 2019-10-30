@@ -17,7 +17,7 @@ export default function LogIn() {
                                 <span className="account__logo-accent">Reactor</span>
                                 </span>
                             </h3>
-                            <h4 className="account__subhead subhead">Please log in or register to start survay</h4>
+                            <h4 className="account__subhead subhead">Please log in or register to start survey</h4>
                         </div>
                         <LogInForm />
                         <div className="account__or">

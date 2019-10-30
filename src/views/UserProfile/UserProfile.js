@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react'
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -9,12 +9,13 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
-import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
+import CardProfile from "components/Card/CardProfile";
+import { useState } from "react";
 
 
-import avatar from "assets/img/faces/marc.jpg";
+
 
 const styles = {
   cardCategoryWhite: {
@@ -44,7 +45,14 @@ const styles = {
 
 const useStyles = makeStyles(styles);
 
+
+
 export default function UserProfile() {
+  const [title, firstName, lastName, description] = useState(0);
+
+
+
+
   const classes = useStyles();
   return (
     <div>
@@ -57,7 +65,7 @@ export default function UserProfile() {
             </CardHeader>
             <CardBody>
               <GridContainer>
-                <GridItem xs={12} sm={12} md={5}>
+                <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText="Organization"
                     id="organization"
@@ -69,7 +77,7 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-                <GridItem xs={12} sm={12} md={3}>
+                <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText="Job Title"
                     id="jobTitle"
@@ -89,7 +97,7 @@ export default function UserProfile() {
                 </GridItem>
               </GridContainer>
               <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
+                <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText="First Name"
                     id="first-name"
@@ -98,21 +106,10 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
+                <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText="Last Name"
                     id="last-name"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={4}>
-                  <CustomInput
-                    labelText="City"
-                    id="city"
                     formControlProps={{
                       fullWidth: true
                     }}
@@ -127,7 +124,28 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
+                {/* <GridItem xs={12} sm={12} md={4}>
+                  <CustomInput
+                    labelText="Phone"
+                    id="phone"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                  />
+                </GridItem> */}
+              </GridContainer>
+              <GridContainer>
+                {/* <GridItem xs={12} sm={12} md={6}>
+                  <CustomInput
+                    labelText="Address"
+                    id="address"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                  />
+                </GridItem> */}
+
+                {/* <GridItem xs={12} sm={12} md={3}>
                   <CustomInput
                     labelText="Postal Code"
                     id="postal-code"
@@ -135,13 +153,13 @@ export default function UserProfile() {
                       fullWidth: true
                     }}
                   />
-                </GridItem>
+                </GridItem> */}
               </GridContainer>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={12}>
                   <InputLabel
                     className={classes.aboutContainer}
-                    // style={{ color: "#F1810F" }}
+                  // style={{ color: "#F1810F" }}
                   >
                     About me
                   </InputLabel>
@@ -166,23 +184,11 @@ export default function UserProfile() {
         </GridItem>
         {/* right card starts */}
         <GridItem xs={12} sm={12} md={4}>
-          <Card profile>
-          {/* Todo: automatically import picture */}
-            <CardAvatar profile>
-              <a href="#pablo" onClick={e => e.preventDefault()}>
-                <img src={avatar} alt="..." />
-              </a>
-            </CardAvatar>
-            <CardBody profile className={classes.userCard}>
-              <h6 className={classes.cardCategory}>Software developer</h6>
-              <h4 className={classes.cardTitle}>James Rho</h4>
-              <p className={classes.description}>
-                I{"'"}m interested in something something something
-              </p>
-            </CardBody>
-          </Card>
+          <CardProfile />
         </GridItem>
+
       </GridContainer>
     </div>
   );
 }
+

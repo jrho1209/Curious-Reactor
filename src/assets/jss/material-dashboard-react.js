@@ -92,7 +92,13 @@ const grayColor = [
 ];
 const blackColor = "#000";
 const whiteColor = "#FFF";
-const curiousColor = "#F1810F";
+//Curious Reactor color pallete
+// const curiousColor = "#F1810F";
+const curiousColor = "#F7882F";
+const curiousBlueBerry = "6B7A8F";
+const curiousCitrus = "F7C331";
+const curiousCore = "DCC7AA";
+const curiousSilver = "#abb8c3";
 
 const boxShadow = {
   boxShadow:
@@ -300,5 +306,10 @@ export {
   title,
   cardTitle,
   cardSubtitle,
-  cardLink
+  cardLink,
+  curiousBlueBerry,
+  curiousCitrus,
+  curiousCore,
+  curiousSilver,
+
 };

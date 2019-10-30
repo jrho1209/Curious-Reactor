@@ -30,42 +30,42 @@ class LogInForm extends PureComponent {
       <form noValidate autoComplete="off">
         {/* //username */}
         <div className="login__input">
-        <TextField
-          id="outlined-full-width"
-          label="Username"
-          style={{ margin: 0 }}
-          placeholder="Name"
-          // helperText=""
-          fullWidth
-          margin="normal"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+          <TextField
+            id="outlined-full-width"
+            label="Username"
+            style={{ margin: 0 }}
+            placeholder="Name"
+            // helperText=""
+            fullWidth
+            margin="normal"
+            variant="outlined"
+            InputLabelProps={{
+              shrink: true,
+            }}
+          />
         </div>
 
         {/* password */}
         <div className="login__input">
-         <TextField
-        id="outlined-password-input"
-        label="Password"
-        // className={classes.textField}
-        fullWidth
-        type="password"
-        autoComplete="current-password"
-        margin="normal"
-        variant="outlined"
-      />
+          <TextField
+            id="outlined-password-input"
+            label="Password"
+            // className={classes.textField}
+            fullWidth
+            type="password"
+            autoComplete="current-password"
+            margin="normal"
+            variant="outlined"
+          />
         </div>
 
         <Link to="/admin/dashboard">
-        <Button variant="outlined" color="primary"> Sign in </Button>
+          <Button variant="outlined" color="primary"> Sign in </Button>
         </Link>
         <Link to="/admin/dashboard">
-        <div className="login__button">
-        <Button variant="outlined"> Register to Survay </Button>
-        </div>
+          <div className="login__button">
+            <Button variant="outlined"> Register to Survey </Button>
+          </div>
         </Link>
       </form>
 
