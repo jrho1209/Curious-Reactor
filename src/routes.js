@@ -97,7 +97,7 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/survey-history",
+    path: "/history",
     name: "Survey History",
     icon: HistoryIcon,
     component: SurveyHistory,
