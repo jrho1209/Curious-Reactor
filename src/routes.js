@@ -33,6 +33,7 @@ import Maps from "views/Maps/Maps.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
 import Survey from "views/Survey/Survey.js";
 import MatchedHistory from "views/MatchedHistory/MatchedHistory";
+import Registraion from "views/LogIn/Registration";
 import SurveyHistory from "views/SurveyHistory/SurveyHistory";
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import HistoryIcon from '@material-ui/icons/History';
@@ -45,14 +46,14 @@ const dashboardRoutes = [
     name: "Dashboard",
     icon: Dashboard,
     component: DashboardPage,
-    layout: "/admin"
+    layout: "/homepage"
   },
   {
     path: "/user",
     name: "User Profile",
     icon: Person,
     component: UserProfile,
-    layout: "/admin"
+    layout: "/homepage"
   },
   // {
   //   path: "/table",
@@ -94,21 +95,28 @@ const dashboardRoutes = [
     name: "Survey",
     icon: AssignmentIcon,
     component: Survey,
-    layout: "/admin"
+    layout: "/homepage"
   },
   {
     path: "/history",
     name: "Survey History",
     icon: HistoryIcon,
     component: SurveyHistory,
-    layout: "/admin"
+    layout: "/homepage"
   },
   {
     path: "/matched-history",
     name: "Matched History",
     icon: EmojiPeopleIcon,
     component: MatchedHistory,
-    layout: "/admin"
+    layout: "/homepage"
+  },
+  {
+    path: "/registration",
+    name: "Registraion",
+    icon: EmojiPeopleIcon,
+    component: Registraion,
+    layout: "/homepage"
   },
 
 

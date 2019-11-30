@@ -25,15 +25,17 @@ import Admin from "layouts/Admin.js";
 import LogIn from "./views/LogIn/LogIn.js";
 import "assets/css/material-dashboard-react.css?v=1.8.0";
 import "index.scss";
+import Registration from "views/LogIn/Registration.js";
 
 const hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
-      <Route path="/admin" component={Admin} />
+      <Route path="/homepage" component={Admin} />
       <Route path="/login" component={LogIn} />
-      <Redirect from="/" to="/admin/dashboard" />
+      <Route path="/registration" component={Registration} />
+      <Redirect from="/" to="/homepage/dashboard" />
     </Switch>
   </Router>,
   document.getElementById("root")

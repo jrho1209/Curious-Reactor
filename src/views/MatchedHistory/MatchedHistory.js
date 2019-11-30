@@ -4,6 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import CardProfile from "components/Card/CardProfile";
 import GridItem from 'components/Grid/GridItem';
 import Grid from '@material-ui/core/Grid';
+import GridContainer from "components/Grid/GridContainer";
+import MatchedProfiles from "components/MatchedProfiles/MatchedProfiles";
 
 
 
@@ -25,17 +27,16 @@ export default function MatchedHistory() {
     const classes = useStyles();
     return (
         <div>
-            <Grid className={classes.leftCard} xs={12} sm={12} md={12}>
-                <GridItem md={5.5}>
-                    <CardProfile />
+            <Grid className={classes.leftCard} >
+                <GridItem md={6}>
+                    <MatchedProfiles />
                 </GridItem>
-                <GridItem md={1}>
+                {/* <GridItem md={1}>
 
                 </GridItem>
                 <GridItem md={5.5}>
                     <CardProfile />
-                </GridItem>
-
+                </GridItem> */}
             </Grid>
             {/* 
             <Grid className={classes.rightCard} xs={12} sm={12} md={5}>

@@ -3,9 +3,9 @@ import GridContainer from 'components/Grid/GridContainer';
 import GridItem from 'components/Grid/GridItem';
 import Card from 'components/Card/Card';
 import CustomStepper from 'components/Stepper/Stepper';
+import SurveyCheckBox from 'components/Stepper/SurveyCheckBox';
 import CardHeader from 'components/Card/CardHeader';
 import { makeStyles } from "@material-ui/core/styles";
-import Checkbox from 'components/CheckBox/CheckBox';
 
 const styles = {
     cardCategoryWhite: {
@@ -35,12 +35,12 @@ export default function Survey() {
                 <Card>
                     <CardHeader color="info">
                         <h4 className={classes.cardTitleWhite}>Take a Survey</h4>
-                        <p className={classes.cardCategoryWhite}>Take a survey to match a person who are looking for</p>
+                        <p className={classes.cardCategoryWhite}>What are you hoping to get out of your networking time at this meeting? Are you:</p>
                     </CardHeader>
-                
-                       
+                    <SurveyCheckBox />
                     <CustomStepper />
                 </Card>
+
             </GridItem>
         </GridContainer>
     )

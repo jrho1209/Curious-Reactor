@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '90%',
@@ -22,10 +23,21 @@ const useStyles = makeStyles(theme => ({
   resetContainer: {
     padding: theme.spacing(3),
   },
+  checkboxContainer: {
+    margine: theme.spacing(2),
+    display: 'flex'
+  },
+  cardMargin: {
+    marginTop: "15px",
+    marginLeft: "10px"
+  },
+  fontColor: {
+    color: 'black'
+  }
 }));
 
 function getSteps() {
-  return ['Questionarie ', 'Taking Survey', 'Finish'];
+  return ['Questionarie ', 'Technology', 'Partnership', 'Finish'];
 }
 
 function getStepContent(step) {
@@ -61,8 +73,10 @@ export default function CustomStepper() {
     setActiveStep(0);
   };
 
+
   return (
-    <div className={classes.root}>
+    <div>
+
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
           <Step key={label}>
@@ -92,14 +106,16 @@ export default function CustomStepper() {
           </Step>
         ))}
       </Stepper>
-      {activeStep === steps.length && (
-        <Paper square elevation={0} className={classes.resetContainer}>
-          <Typography>All steps completed - you&apos;re finished</Typography>
-          <Button onClick={handleReset} className={classes.button}>
-            Reset
+      {
+        activeStep === steps.length && (
+          <Paper square elevation={0} className={classes.resetContainer}>
+            <Typography>All steps completed - you&apos;re finished</Typography>
+            <Button onClick={handleReset} className={classes.button}>
+              Reset
           </Button>
-        </Paper>
-      )}
-    </div>
+          </Paper>
+        )
+      }
+    </div >
   );
 }
