@@ -1,0 +1,20 @@
+{
+    "react": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-curious-reactor-react-142212-authRole",
+            "UnauthRoleArn": "arn:aws:iam::480091759974:role/amplify-curious-reactor-react-142212-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::480091759974:role/amplify-curious-reactor-react-142212-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-curious-reactor-react-142212-deployment",
+            "UnauthRoleName": "amplify-curious-reactor-react-142212-unauthRole",
+            "StackName": "amplify-curious-reactor-react-142212",
+            "StackId": "arn:aws:cloudformation:us-east-1:480091759974:stack/amplify-curious-reactor-react-142212/dc150db0-13bf-11ea-89d5-0e794c84352f",
+            "AmplifyAppId": "d3c9yt6p5lo6d8"
+        },
+        "categories": {
+            "auth": {
+                "curiousreactor7fa2f7d0": {}
+            }
+        }
+    }
+}

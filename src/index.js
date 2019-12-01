@@ -15,8 +15,9 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import App from './App';
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 
@@ -27,16 +28,22 @@ import "assets/css/material-dashboard-react.css?v=1.8.0";
 import "index.scss";
 import Registration from "views/LogIn/Registration.js";
 
-const hist = createBrowserHistory();
 
-ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route path="/homepage" component={Admin} />
-      <Route path="/login" component={LogIn} />
-      <Route path="/registration" component={Registration} />
-      <Redirect from="/" to="/homepage/dashboard" />
-    </Switch>
-  </Router>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById('root'));
+
+// const hist = createBrowserHistory();
+
+// ReactDOM.render(
+//   <Router history={hist}>
+//     <Switch>
+//       <Route path="/homepage" component={Admin} />
+//       <Route path="/login" component={LogIn} />
+//       <Route path="/registration" component={Registration} />
+//       <Route path="/sign_in" component={SignInForm} />
+//       <Redirect from="/" to="/homepage/dashboard" />
+//     </Switch>
+//   </Router>,
+//   document.getElementById("root")
+// );
+
+
